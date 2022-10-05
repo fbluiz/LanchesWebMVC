@@ -1,4 +1,6 @@
 using LanchesMac.Context;
+using LanchesMac.Repositories;
+using LanchesMac.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<ILancheRepository,LancheRepository>();
+builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer("Server = FBLUIZ\\SQLEXPRESS; Initial Catalog = LanchesDataBase; Integrated Security = True"));
 
