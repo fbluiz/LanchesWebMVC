@@ -15,7 +15,9 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<ILancheRepository,LancheRepository>();
 builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
 
-builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer("Server = FBLUIZ\\SQLEXPRESS; Initial Catalog = LanchesDataBase; Integrated Security = True"));
+builder.Services.AddDbContext<AppDbContext>
+    (options => options.UseSqlServer
+    ("Server=DESKTOP-332I3M0\\SQLEXPRESS;Database=LanchesDataBase;Trusted_Connection=True;"));
 
 var app = builder.Build();
 

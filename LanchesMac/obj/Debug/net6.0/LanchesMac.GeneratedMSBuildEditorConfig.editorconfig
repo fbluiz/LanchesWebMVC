@@ -8,37 +8,41 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LanchesMac
 build_property.RootNamespace = LanchesMac
-build_property.ProjectDir = C:\Projetos Web\LanchesMac\LanchesMac\
+build_property.ProjectDir = C:\Users\brson\source\repos\LanchesWebMVC\LanchesMac\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Projetos Web\LanchesMac\LanchesMac
+build_property.MSBuildProjectDirectory = C:\Users\brson\source\repos\LanchesWebMVC\LanchesMac
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Projetos Web/LanchesMac/LanchesMac/Views/Home/Index.cshtml]
+[C:/Users/brson/source/repos/LanchesWebMVC/LanchesMac/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projetos Web/LanchesMac/LanchesMac/Views/Shared/Error.cshtml]
+[C:/Users/brson/source/repos/LanchesWebMVC/LanchesMac/Views/Lanche/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuY2hlXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/brson/source/repos/LanchesWebMVC/LanchesMac/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projetos Web/LanchesMac/LanchesMac/Views/Shared/_Carousel.cshtml]
+[C:/Users/brson/source/repos/LanchesWebMVC/LanchesMac/Views/Shared/_Carousel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXJvdXNlbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projetos Web/LanchesMac/LanchesMac/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/brson/source/repos/LanchesWebMVC/LanchesMac/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projetos Web/LanchesMac/LanchesMac/Views/_ViewImports.cshtml]
+[C:/Users/brson/source/repos/LanchesWebMVC/LanchesMac/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projetos Web/LanchesMac/LanchesMac/Views/_ViewStart.cshtml]
+[C:/Users/brson/source/repos/LanchesWebMVC/LanchesMac/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projetos Web/LanchesMac/LanchesMac/Views/Shared/_Layout.cshtml]
+[C:/Users/brson/source/repos/LanchesWebMVC/LanchesMac/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-5ce5rcob1o
