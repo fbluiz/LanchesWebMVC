@@ -1,14 +1,18 @@
-﻿@model IEnumerable<LanchesMac.Models.Lanche>
+﻿@model LancheListViewModel
 
 <div>
-    <h2>Todos os Lanches: </h2>
+    <h2>@Model.CategoriaAtual</h2>
 </div>
 
-@foreach (var lanche in Model)
-{
-    <div>
-        <h4>@lanche.Nome</h4>
-        <p><img src="@lanche.ImagemUrl"></p>
-        <h3>Preço: @lanche.Preco.ToString("c")</h3>
+
+
+
+
+<div class="container"> 
+    <div class="row">
+    @foreach (var lanche in Model.Lanches)
+    {
+        <partial name= "_lanchesResumo" for = "@lanche"/> 
+    }
     </div>
-}
+</div>
