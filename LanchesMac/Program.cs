@@ -1,49 +1,17 @@
-using LanchesMac.Context;
-using LanchesMac.Repositories;
-using LanchesMac.Repositories.Interfaces;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Routing;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Hosting;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddControllersWithViews();
-builder.Services.AddTransient<ILancheRepository,LancheRepository>();
-builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
-builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
-builder.Services.AddMemoryCache();
-builder.Services.AddSession();
-
-builder.Services.AddDbContext<AppDbContext>
-    (options => options.UseSqlServer
-    ("Server=DESKTOP-332I3M0\\SQLEXPRESS;Database=LanchesDataBase;Trusted_Connection=True;"));
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+namespace LanchesMac;
+public class Program
 {
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    public static void Main(string[] args)
+    {
+        CreateHostBuilder(args).Build().Run();
+    }
+
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+        Host.CreateDefaultBuilder(args)
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            });
 }
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-
-app.Run();
-
-app.UseSession();
