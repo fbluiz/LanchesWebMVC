@@ -27,26 +27,10 @@ namespace LanchesMac.Controllers
             }
             else
             {
-                if (string.Equals("Normal", categoria, StringComparison.OrdinalIgnoreCase))
-                {
-                    lanches = _lancheRepository.Lanches
-                        .Where(p => p.Categoria.CategoriaNome.Equals("Normal"))
-                        .OrderBy(l => l.Nome);
-                    categoriaAtual = categoria;
-                }
-                else if (string.Equals("Natural", categoria, StringComparison.OrdinalIgnoreCase))
-                {
-                    lanches = _lancheRepository.Lanches
-                        .Where(p => p.Categoria.CategoriaNome.Equals("Natural"))
-                        .OrderBy(l => l.Nome);
-                    categoriaAtual = categoria;
-                }
-                else 
-                {
-                    lanches = _lancheRepository.Lanches;
-                    categoriaAtual = "Categoria Inválida!";
-                }
-                
+                lanches = _lancheRepository.Lanches
+                    .Where(c => c.Categoria.CategoriaNome.Equals(categoria))
+                    .OrderBy(c => c.Nome);
+                categoriaAtual = categoria;
             }
             var lanchesListViewModel = new LancheListViewModel { Lanches = lanches, CategoriaAtual = categoriaAtual };
 
